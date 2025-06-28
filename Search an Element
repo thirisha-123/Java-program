@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        int a=0;
+        int element=sc.nextInt();
+        for(int i=0;i<size;i++)
+            if(arr[i]==element){
+                a=1;
+                break;
+            }
+            if(a==1){
+                System.out.println(element+" is presented in an array.");
+            }
+        else
+        {
+            System.out.println(element+" is not presented in an array.");
+        }
+    }
+}
