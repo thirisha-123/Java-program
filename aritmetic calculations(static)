@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num1=sc.nextInt();
+      int num2=sc.nextInt();
+        char ch=sc.next().charAt(0);
+        switch(ch){
+            case '+':
+                Add(num1,num2);
+                break;
+            case '-':
+                Sub(num1,num2);
+                break;
+            case '*':
+                Mul(num1,num2);
+                break;
+            case '/':
+                Div(num1,num2);
+                break;
+            case '%':
+                Mod(num1,num2);
+                break;
+            default:
+                System.out.println("Invalid Input");   
+        }
+    }
+       static void Add(int a,int b){
+            System.out.printf("Addition of two number is %.1f",(float)a+b);
+        }
+       static void Sub(int a,int b){
+            System.out.printf("Subtraction of two number is %.1f",(float)a-b);
+        }
+        static void Mul(int a,int b){
+            System.out.printf("Mul of two number is %.1f",(float)a*b);
+        }
+        static void Div(int a,int b){
+            System.out.printf("Div of two number is %.1f",(float)a/b);
+        }
+        static void Mod(int a,int b){
+            System.out.printf("Mod of two number is %.1f",(float)a%b);
+    }
+}
