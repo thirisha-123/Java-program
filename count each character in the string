@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        char[] letters=str.toCharArray();
+        for(int i=0;i<letters.length;i++){
+            if(letters[i]=='\0'){
+                continue;
+            }
+            int count=1;
+            for(int j=i+1;j<letters.length;j++){
+                if(letters[i]==letters[j]){
+                    count++;
+                  letters[j]='\0';
+                }
+            }
+            System.out.println(letters[i]+"   "+count);
+        }
+    }
+}
