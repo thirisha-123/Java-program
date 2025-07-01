@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int number=sc.nextInt();
+        if(number>1000)
+        {
+            System.out.println("Enter a Valid Input!!!!!!!");
+            return;
+        }
+       int  result=sum(number);
+        System.out.printf("Sum of Digit:"+"%04d",result);
+    }
+        static int sum(int n)
+        {
+            if(n!=0)
+                return n%10+sum(n/10);
+                else
+                    return 0;
+        }
+    }
+
