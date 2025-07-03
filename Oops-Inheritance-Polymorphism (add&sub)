@@ -1,0 +1,48 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class Arithmetic{
+    void add(int a,int b)
+    {
+        System.out.println("Adding Two Numbers of a and b is "+a+" + "+b+" = "+(a+b));
+    }
+    void sub(int a,int b)
+    {
+        System.out.println("Subtracting Two Numbers of a and b is "+a+" - "+b+" = "+(a-b));
+    }
+        void add(int a,int b,int c)
+        {
+            System.out.println("Adding Three Numbers of a,b and c is "+a+" + "+b+" + "+c+" = "+(a+b+c));
+        }
+        void sub(int a,int b,int c)
+        {
+            System.out.println("Subtracting Three Numbers of a,b and c is "+a+" - "+b+" - "+c+" = "+(a-b-c));
+        }
+    }
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        if(a>50||b>50||c>50){
+            System.out.println("Dear User,Kindly Enter the Valid Input.");
+        }
+        else
+        {
+            System.out.println("Hello User,Here Your Calculation!!!");
+            Arithmetic obj=new Arithmetic();
+        System.out.println("Addition and Subtraction using two passing datas:-");
+        obj.add(a,b);
+        obj.sub(a,b);
+        System.out.println("Addition and Subtraction using three passing datas:-");
+        obj.add(a,b,c);
+        obj.sub(a,b,c);
+        }
+        
+    }
+}
