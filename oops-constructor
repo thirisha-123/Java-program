@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+class Person{
+   String name;
+    int age;
+     Person(String str,int age){
+        this.name=str;
+        this.age=age;
+    }
+    void display(){
+        System.out.println("Welcome User!!!Here you Information\nYou details are,");
+        System.out.println("My name is "+name);
+        System.out.println("My age is "+age);
+                          
+    }
+}
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        int age=sc.nextInt();
+        if(age<=35){
+            Person obj=new Person(str,age);
+            obj.display();
+        }
+        else{
+            System.out.println("Dear User,Kindly Enter the valid Input...");
+        }
+    }
+}
