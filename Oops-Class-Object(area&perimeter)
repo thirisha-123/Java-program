@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+class Rectangle{
+    void area(int width,int height){
+        System.out.printf("Area of the Rectangle is %.2f\n",(float)(width*height));
+    }
+    void perimeter(int width,int height){
+        System.out.printf("Perimeter of the Rectangle is %.2f",(float)(2*(width+height)));
+    }
+}
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+        int width=sc.nextInt();
+        int height=sc.nextInt();
+        if(width<=10 && height<=10){
+            System.out.println("Here your Answers!!!");
+            Rectangle obj=new Rectangle();
+             obj.area(width,height);
+             obj.perimeter(width,height);
+        }
+       
+        else{
+            System.out.println("Hello User,Kindly Enter the valid Input.");
+        }
+        
+    }
+}
