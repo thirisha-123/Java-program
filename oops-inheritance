@@ -1,0 +1,48 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+class Person{
+   String name;
+    Person(String name){
+        this.name=name;
+    }
+}
+class Employee extends Person{
+    String jobTitle;
+    double salary;
+    Employee(String name,String jobTitle,double salary){
+        super(name);
+        this.jobTitle=jobTitle;
+        this.salary=salary;
+    }
+    double calculateHike(double percentage){
+        return salary+(salary*percentage)/100;
+    }
+    void displayDetails(double hikepercentage){
+        System.out.println("Dear Employee,Here Your Details!!!!");
+        System.out.println("Employee Name:"+name);
+        System.out.println("Employee Role:"+jobTitle);
+        System.out.printf("Employee Salary:%.2f\n",salary);
+        System.out.printf("After hike,Employee Salary:%.2f",calculateHike(hikepercentage));
+    }
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+         String name=sc.nextLine();
+         String jobTitle=sc.nextLine();
+         double salary=sc.nextDouble();
+         double hike=sc.nextDouble();
+        if(salary>=50000){
+            Employee emp=new Employee(name,jobTitle,salary);
+            emp.displayDetails(hike);
+        }else{
+            System.out.println("Dear Employee,Salary Increment only for above 50000k.");
+        }
+        
+       
+    }
+}
